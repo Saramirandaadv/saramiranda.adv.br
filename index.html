@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Sara Miranda | Defesa Jurídica das Mulheres & Direito de Família</title>
+    <style>
+        /* CSS RESET & CONFIGURAÇÕES BÁSICAS */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #2b303a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* PALETA DE CORES (Premium & Sobria)
+           Azul Profundo/Marinho (Autoridade): #111e38
+           Dourado Champagne (Elegância/Acolhimento): #d4af37
+           Off-White Secundário: #f4f6f9
+        */
+
+        /* CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #111e38;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-wrap {
+            display: table;
+            width: 100%;
+        }
+
+        .logo-box {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .logo-box h1 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo-box h1 span {
+            color: #d4af37;
+            font-weight: 300;
+            display: block;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .nav-box {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: right;
+        }
+
+        .btn-header {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #111e38;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 13px;
+            border-radius: 4px;
+            transition: background 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-header:hover {
+            background-color: #c19e30;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background-color: #111e38;
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        .hero-tag {
+            color: #d4af37;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.3;
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #e2e8f0;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            font-weight: 300;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background-color: #d4af37;
+            color: #111e38;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #c19e30;
+        }
+
+        .btn-secondary {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* TICKER / MARQUEE */
+        .ticker {
+            background-color: #0b1324;
+            color: #ffffff;
+            padding: 15px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+            padding-left: 100%;
+        }
+
+        .ticker-item {
+            display: inline-block;
+            padding: 0 25px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #cbd5e1;
+        }
+
+        .ticker-item::after {
+            content: "•";
+            color: #d4af37;
+            margin-left: 50px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* SECTIONS GERAIS */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-bg {
+            background-color: #f4f6f9;
+        }
+
+        .section-sub {
+            color: #d4af37;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #111e38;
+            margin-bottom: 40px;
+            position: relative;
+            padding-left: 15px;
+            border-left: 4px solid #d4af37;
+        }
+
+        /* SOBRE A ADVOGADA */
+        .sobre-row {
+            display: table;
+            width: 100%;
+        }
+
+        .sobre-col-text {
+            display: table-cell;
+            width: 60%;
+            vertical-align: middle;
+            padding-right: 50px;
+        }
+
+        .sobre-col-img {
+            display: table-cell;
+            width: 40%;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        .sobre-col-text p {
+            margin-bottom: 20px;
+            font-size: 15px;
+            color: #4a5568;
+            text-align: justify;
+        }
+
+        .sobre-img-placeholder {
+            background-color: #111e38;
+            border: 3px solid #d4af37;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 350px;
+            height: 450px;
+            display: inline-block;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .sobre-img-placeholder span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-size: 14px;
+            font-style: italic;
+            opacity: 0.7;
+            text-align: center;
+            width: 80%;
+        }
+
+        /* CONTADORES */
+        .counters-row {
+            margin-top: 40px;
+            display: table;
+            width: 100%;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 30px;
+        }
+
+        .counter-box {
+            display: table-cell;
+            width: 33.33%;
+            text-align: left;
+        }
+
+        .counter-num {
+            font-size: 32px;
+            font-weight: bold;
+            color: #111e38;
+            display: block;
+        }
+
+        .counter-num span {
+            color: #d4af37;
+        }
+
+        .counter-label {
+            font-size: 13px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* METODOLOGIA */
+        .metodologia-row {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .metodologia-card {
+            display: table-cell;
+            padding: 30px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            position: relative;
+            width: 33.33%;
+        }
+
+        .metodologia-card:not(:last-child) {
+            border-right: none; /* une visualmente ou deixa espaço com margem simulada abaixo */
+        }
+
+        /* Para criar espaçamento real em tabelas usamos border-spacing ou divs internas */
+        .grid-3 {
+            display: block;
+            margin-bottom: -20px;
+        }
+        
+        .grid-3-col {
+            display: inline-block;
+            width: 31%;
+            margin-right: 2%;
+            margin-bottom: 20px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 6px;
+            border-bottom: 3px solid #111e38;
+            vertical-align: top;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .grid-3-col:last-child {
+            margin-right: 0;
+        }
+
+        .step-num {
+            font-size: 40px;
+            font-weight: bold;
+            color: rgba(212, 175, 55, 0.2);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .grid-3-col h3 {
+            font-size: 18px;
+            color: #111e38;
+            margin-bottom: 15px;
+        }
+
+        .grid-3-col p {
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        /* EXPERTISE (4 CARDS) */
+        .grid-2 {
+            display: block;
+        }
+
+        .grid-2-col {
+            display: inline-block;
+            width: 48%;
+            margin-right: 3%;
+            margin-bottom: 25px;
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 6px;
+            vertical-align: top;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .grid-2-col:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .grid-2-col h3 {
+            font-size: 18px;
+            color: #111e38;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #f4f6f9;
+            padding-bottom: 10px;
+        }
+
+        .grid-2-col p {
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        /* FAQ (ACCORDION SIMULADO SEM JS COM DETAILS/SUMMARY) */
+        details {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+        }
+
+        summary {
+            font-weight: bold;
+            color: #111e38;
+            cursor: pointer;
+            outline: none;
+            font-size: 15px;
+        }
+
+        details[open] summary {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        details p {
+            font-size: 14px;
+            color: #4a5568;
+            padding-left: 5px;
+            border-left: 2px solid #d4af37;
+        }
+
+        /* DEPOIMENTOS */
+        .depoimento-box {
+            background-color: #111e38;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #d4af37;
+        }
+
+        .depoimento-box p {
+            font-style: italic;
+            font-size: 15px;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+        }
+
+        .depoimento-box h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #d4af37;
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            background-color: #111e38;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+            border-top: 3px solid #d4af37;
+        }
+
+        .cta-final h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto 35px auto;
+            color: #cbd5e1;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0b1324;
+            color: #ffffff;
+            padding: 60px 0 30px 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-row {
+            display: table;
+            width: 100%;
+        }
+
+        .footer-col {
+            display: table-cell;
+            width: 33.33%;
+            vertical-align: top;
+            padding-right: 30px;
+        }
+
+        .footer-col h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            margin-top: 50px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        /* RESPONSIVIDADE COMPLETA PARA CELULAR (MEDIA QUERIES) */
+        @media (max-width: 768px) {
+            .header-wrap, .sobre-row, .counters-row, .footer-row {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .logo-box, .nav-box, .sobre-col-text, .sobre-col-img, .counter-box, .footer-col {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+            }
+
+            .nav-box {
+                margin-top: 20px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-buttons a {
+                display: block;
+                margin: 15px 0;
+            }
+
+            .sobre-col-img {
+                margin-top: 40px;
+            }
+
+            .counter-box {
+                margin-bottom: 25px;
+            }
+
+            .grid-3-col, .grid-2-col {
+                display: block !important;
+                width: 100% !important;
+                margin-right: 0 !important;
+                margin-bottom: 20px !important;
+            }
+
+            .footer-col {
+                margin-bottom: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="container">
+            <div class="header-wrap">
+                <div class="logo-box">
+                    <h1>Sara Miranda <span>Defesa Jurídica das Mulheres</span></h1>
+                </div>
+                <div class="nav-box">
+                    <a href="https://wa.me/5573981904117?text=Olá,%20Dra.%20Sara.%20Gostaria%20de%20agendar%20uma%20consultoria%20segura." class="btn-header" target="_blank">Consultoria Online</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-tag">Proteção, Dignidade e Justiça</span>
+            <h2>A defesa estratégica que protege a sua vida e a sua família.</h2>
+            <p>Advocacia técnica e humanizada exclusiva para mulheres. Atendimento especializado em situações de violência, vulnerabilidade e conflitos familiares em todo o Brasil.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5573981904117?text=Olá,%20Dra.%20Sara.%20Gostaria%20de%20agendar%20um%20atendimento%20seguro." class="btn-primary" target="_blank">Agendar Atendimento Seguro</a>
+                <a href="#sobre" class="btn-secondary">Conheça a Dra.</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRA ROTATIVA (TICKER) -->
+    <div class="ticker">
+        <div class="ticker-content">
+            <span class="ticker-item">Medidas Protetivas</span>
+            <span class="ticker-item">Divórcio & Partilha</span>
+            <span class="ticker-item">Guarda & Pensão</span>
+            <span class="ticker-item">Violência Doméstica</span>
+            <span class="ticker-item">Alienação Parental</span>
+            <span class="ticker-item">Atendimento Nacional Digital</span>
+        </div>
+    </div>
+
+    <!-- SOBRE A ADVOGADA -->
+    <section id="sobre">
+        <div class="container">
+            <div class="sobre-row">
+                <div class="sobre-col-text">
+                    <span class="section-sub">A Advogada</span>
+                    <h2 class="section-title">Justiça com autoridade e acolhimento.</h2>
+                    <p>Sou <strong>Sara Miranda</strong>, advogada dedicada a garantir que nenhuma mulher enfrente o sistema jurídico sozinha ou desamparada.</p>
+                    <p>Minha atuação é pautada pelo combate à vulnerabilidade e pela solução incisiva de conflitos familiares. Tratamos cada caso com a exclusividade e o sigilo absoluto que a sua segurança exige, unindo o rigor técnico à sensibilidade necessária para momentos de crise.</p>
+                    
+                    <!-- CONTADORES -->
+                    <div class="counters-row">
+                        <div class="counter-box">
+                            <span class="counter-num">+150<span>+</span></span>
+                            <span class="counter-label">Mulheres Assistidas</span>
+                        </div>
+                        <div class="counter-box">
+                            <span class="counter-num">100<span>%</span></span>
+                            <span class="counter-label">Sigilo Ético</span>
+                        </div>
+                        <div class="counter-box">
+                            <span class="counter-num">Nacional</span>
+                            <span class="counter-label">Estados Atendidos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-col-img">
+                    <div class="sobre-img-placeholder">
+                        <span>[Espaço reservado para a foto da Dra. Sara Miranda. Nome do arquivo recomendado: foto-sara.jpg]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METODOLOGIA -->
+    <section class="section-bg">
+        <div class="container">
+            <span class="section-sub">Metodologia</span>
+            <h2 class="section-title">O Caminho para a Segurança</h2>
+            
+            <div class="grid-3">
+                <div class="grid-3-col">
+                    <div class="step-num">01</div>
+                    <h3>Escuta Protegida</h3>
+                    <p>Espaço seguro e sigiloso para entender os riscos e as violações de direitos sofridas em ambiente familiar ou social.</p>
+                </div>
+                <div class="grid-3-col">
+                    <div class="step-num">02</div>
+                    <h3>Arquitetura Legal</h3>
+                    <p>Desenvolvimento de teses jurídicas focadas na interrupção imediata da violência e na proteção do patrimônio e dos filhos.</p>
+                </div>
+                <div class="grid-3-col">
+                    <div class="step-num">03</div>
+                    <h3>Execução Ativa</h3>
+                    <p>Atuação incansável em tribunais e delegacias até que a sua paz e os seus direitos sejam plenamente restabelecidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE JURÍDICA -->
+    <section>
+        <div class="container">
+            <span class="section-sub">Expertise Jurídica</span>
+            <h2 class="section-title">Soluções Especializadas</h2>
+            
+            <div class="grid-2">
+                <div class="grid-2-col">
+                    <h3>Violência Doméstica</h3>
+                    <p>Pedido imediato de medidas protetivas de urgência, afastamento do agressor e acompanhamento criminal robusto.</p>
+                </div>
+                <div class="grid-2-col">
+                    <h3>Família e Sucessões</h3>
+                    <p>Divórcio, pensão alimentícia, guarda e partilha patrimonial focados na preservação da dignidade da mulher e dos filhos.</p>
+                </div>
+                <div class="grid-2-col">
+                    <h3>Alienação Parental</h3>
+                    <p>Combate técnico e estratégico a abusos psicológicos sofridos por crianças e adolescentes em cenários de litígio familiar.</p>
+                </div>
+                <div class="grid-2-col">
+                    <h3>Atendimento Digital</h3>
+                    <p>Estrutura moderna e altamente criptografada para peticionar em qualquer tribunal do país com máxima agilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERGUNTAS FREQUENTES -->
+    <section class="section-bg">
+        <div class="container">
+            <span class="section-sub">FAQ</span>
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            
+            <details>
+                <summary>Como pedir uma Medida Protetiva de urgência?</summary>
+                <p>Pode ser solicitada em delegacias especializadas (DEAM), delegacias comuns ou diretamente por meio de petição apresentada por sua advogada. O juiz tem o dever legal de analisar e decidir o pedido em até 48 horas.</p>
+            </details>
+            
+            <details>
+                <summary>Como funciona o atendimento online sigiloso?</summary>
+                <p>Realizamos reuniões por plataformas de chamada de vídeo seguras e com criptografia de ponta a ponta. Como os processos judiciais hoje no Brasil são 100% digitais, conseguimos atuar e defender seus interesses em qualquer estado sem necessidade de deslocamentos.</p>
+            </details>
+            
+            <details>
+                <summary>Não tenho renda própria, como me separar?</summary>
+                <p>A legislação protege a mulher nessa situação. É perfeitamente possível pleitear alimentos provisionais (uma pensão temporária para a subsistência da mulher) e a partilha imediata dos bens acumulados pelo casal, garantindo que você não fique desamparada.</p>
+            </details>
+            
+            <details>
+                <summary>O que é considerado Violência Psicológica?</summary>
+                <p>Qualquer conduta que cause dano emocional, diminuição da autoestima, humilhação, isolamento ou que busque controlar suas ações, decisões, crenças e comportamentos mediante ameaça, constrangimento ou perseguição.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section>
+        <div class="container">
+            <span class="section-sub">Confiança</span>
+            <h2 class="section-title">Relatos de Transformação</h2>
+            
+            <div class="depoimento-box">
+                <p>"A Dra. Sara foi o suporte técnico e emocional que eu precisava no momento mais sombrio da minha vida. Sua firmeza em audiência me trouxe de volta a paz e a segurança que achei que tinha perdido."</p>
+                <h4>Mariana S.</h4>
+            </div>
+            
+            <div class="depoimento-box">
+                <p>"Excelente profissional. Conseguiu resolver meu divórcio litigioso e fixar a guarda e a pensão dos meus filhos de forma incrivelmente rápida e justa. Recomendo de olhos fechados."</p>
+                <h4>Juliana L.</h4>
+            </div>
+
+            <div class="depoimento-box">
+                <p>"O atendimento digital dela é impecável. Moro em outro estado e me senti 100% acolhida e protegida durante todo o processo. Transparência e sigilo absolutos."</p>
+                <h4>Carla M.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAMADA PARA AÇÃO FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2>Sua vida e sua paz são inegociáveis.</h2>
+            <p>Tenha ao seu lado uma especialista pronta para proteger os seus direitos e o futuro da sua família com total sigilo e combatividade.</p>
+            <a href="https://wa.me/5573981904117?text=Olá,%20Dra.%20Sara.%20Gostaria%20de%20agendar%20um%20atendimento%20seguro." class="btn-primary" target="_blank" style="display:inline-block; padding:15px 35px; text-decoration:none; font-weight:bold; border-radius:4px; text-transform:uppercase;">Falar com a Especialista</a>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h3>Sara Miranda</h3>
+                    <p>Justiça & Proteção</p>
+                    <p style="font-size:11px; margin-top:5px; color:#64748b;">Inscrição Profissional: OAB/BA 78.316</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Endereço</h3>
+                    <p>Rua Samuel Arcanjo Miranda</p>
+                    <p>Nova Canaã, Bahia — CEP 45220-000</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato Seguro</h3>
+                    <p>Telefone/WhatsApp: (73) 98190-4117</p>
+                    <p>Atendimento em todo o Território Nacional</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sara Miranda Advocacia. Todos os direitos reservados. Landing Page de Alta Performance.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
